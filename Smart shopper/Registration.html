@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="en">
+<!--Head section>-->
+<head>
+	<title>Smart Shopper</title>
+    <!--Linking the css file to the html file-->
+	<link rel="stylesheet" href="Registration.css" type="text/css" media="screen" />
+	<script src="regvalidate.js" type="text/javascript"></script>
+
+</head>
+<!--Starts the body of the page-->
+<body>
+
+<!--Top div in the page-->
+<div id="parent">
+
+<!--Right side of the parent div-->
+    <div class="right"><font size="6" face="Agency FB" color="#996600"><b>Smart Shopper Best Deal Searching System</b></font></div>
+    <!--Left side of the parent div-->
+    <div class="left"><img src="logo.jpg" alt="logo" width="224" height="117" /></div>
+</div> 
+
+<!--Tab display area-->
+	<nav>
+    <!--Tabs as a unordered list-->
+		<ul>
+        
+			
+            <li><a href="Home.php">Home</a></li>
+			<li><a href="about us.html">About us</a></li>
+			<li class="selected"><a href="Registration.html">Registration</a></li><!--Displayed page when Registration  tab is selected-->
+			<li><a href="Login.html">Login</a></li>
+			<li><a href="Comment.html">Comment</a></li>
+		</ul>
+	</nav>
+    <!--Intro section-->
+	<section id="intro">
+		<header>
+        <!--Animated text-Register-->
+			<h2><div class="cssload-preloader">
+	<div class="cssload-preloader-box">		<div>R</div>		<div>e</div>		<div>g</div>		<div>i</div>		<div>s</div>		<div>t</div>		<div>e</div>		<div>r</div>		</div>
+</div></h2>
+          <img src="reg.jpg" alt="Flower" width="386" height="243" />
+		</header>
+		<p><br><br>
+		Register as a trader and supply deals</p>
+	</section>
+    
+<!--Content area-->
+	<div id="content">
+    <!--Main Content of the home page-->
+	  <div id="mainContent">
+	    <section>
+        <!--Registration form-->
+				  <form name="registration" id ="reg-form" action="traderRegistration.php" onSubmit="return confirmForm(this)" method="post">
+                  <h2 align="left"><font face="Calibri"> Fill this registration form</font></h2>
+				    &nbsp;
+				    First name:<br>&nbsp;
+<input type="text" name="firstname" value="" pattern="[a-zA-Z]{2,}" title="Must have at least 2 characters of alphabet" maxlength="50" required/>
+<br>&nbsp;
+Last name:<br>&nbsp;
+<input type="text" name="lastname" value="" pattern="[a-zA-Z]{2,}" title="Must have at least 2 characters of alphabet" maxlength="50" required/>
+<br>&nbsp;
+E-mail address:<br>&nbsp;
+<input type="text" name="email" value="" pattern="\w.+\@+[a-z]+\.[a-z]{2,7}" title="Example: abc@gmail.com" required/>
+<br>&nbsp;
+Shopping center:<br>&nbsp;
+<input type="text" name="shoppingcenter" value="" pattern="[a-zA-Z]{2,}" title="Must have at least 2 characters of alphabet" maxlength="50" required/>
+<br>&nbsp;
+Contact Number:<br>&nbsp;
+<input type="text" name="contact" value="" pattern="[0-9]{10,}" required/>
+<br>&nbsp;
+Address:<br>&nbsp;
+<input type="text" name="address" value="" required/>
+<br>&nbsp;
+Password:<br>&nbsp;
+<input type="password" name="password" value=""   title="Must have at least 5 characters"  minlength="5" required/>
+<br>&nbsp;
+Confirm password:<br></b>&nbsp;
+<input type="password" name="confirm_password" value="" title="Must be the same password as above" required/>
+<br>
+
+<br>
+<p><input type="submit" value="Submit" name="submit"></p>
+</form>
+		  </section>
+		</div>
+        
+		<aside><!--After Registering...details-->
+			<section>
+				<header>
+					<h3>After registering.....</h3>
+				</header>
+                <ol><font size=4 color="#000099">
+                  <li>You can log in to your account</li>
+                  <li>Edit item prices</li></font>
+                </ol>
+            </section>
+		</aside>
+	</div>
+    
+    <!--Footer of the page-->
+	<footer>
+		<div></div>
+	</footer>
+	
+</body>
+</html>

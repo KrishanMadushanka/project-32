@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+<!--Head section>-->
+    <!--Linking the css file to the html file-->
+    
+<head>
+	<title>Smart Shopper</title>
+    
+	<link rel="stylesheet" href="Login.css" type="text/css" media="screen" />
+</head>
+<!--Starts the body of the page-->
+<body>
+	<!--Top div in the page-->
+	<div id="parent">
+    
+    <!--Right side of the parent div-->
+    
+    <div class="right"><font size="6" face="Agency FB" color="#996600"><b>Smart Shopper Best Deal Searching System</b></font></div>
+    <!--Left side of the parent div-->
+    <div class="left"><img src="logo.jpg" alt="logo" width="224" height="117" /></div>
+</div> 
+
+<!--Tab display area-->
+	<nav>
+    <!--Tabs as a unordered list-->
+    <Ul>
+            <li><a href="Home.php">Home</a></li>
+			<li><a href="about us.html">About us</a></li>
+			<li><a href="Registration.html">Registration</a></li>
+            <li class="selected"><a href="Login.html">Login</a></li><!--Displayed page when home  tab is selected-->
+			<li><a href="Comment.html">Comment</a></li>
+			
+		</ul>
+	</nav>
+    
+<!--Intro section-->
+	<section id="intro" name="intro">
+		<header>
+        <!--Animated text-Login-->
+			<h2><div class="cssload-preloader">
+	<div class="cssload-preloader-box">		<div>L</div>		<div>o</div>		<div>g</div>		<div>i</div>		<div>n</div></div>
+</div>
+            
+            </h2>
+            <!--Image displayed in the intro section-->
+          <img src="log.jpg" alt="log" width="386" height="243" />
+		</header>
+		<p><br><br>Login to your account</p>
+	</section>
+    
+<!--Content area-->
+<div id="content">
+
+    <!--Main Content of the home page-->
+	<div id="mainContent">
+    <!--Login form-->
+				<div id="login">
+			<form action="loggin.php" method="post">
+<fieldset>
+<label for="Username">E-mail</label><br>
+<p><input name="Username" type="text" required value="" onBlur="if(this.value=='')this.value=''" onFocus="if(this.value=='Username')this.value='' "></p>
+<label for="Password">Password</label><br>
+<p><input name="Password" type="password" required value="" onBlur="if(this.value=='')this.value=''" onFocus="if(this.value=='Password')this.value='' "></p>
+<!--<p><a href="#">Forgot Password?</a></p>-->
+<p><input type="submit" value="Login" name="submit"></p>
+</fieldset>
+</form>
+		</div>
+    <!--Footer of the page-->
+	<footer>
+		<div></div>
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,423 @@
+{
+	margin: 0;
+	padding:0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+
+body {/*contains everything that the user will see.Any text, images and links used in the page are placed between the body tag.*/
+	margin:auto;
+	padding:0;
+	width: 1000px;
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background-color:#CCF;
+}
+#parent {/*top div in the body-Includes right,left divs.*/
+	margin-top:2px;
+    overflow: hidden;
+	margin-bottom:5px;
+}
+.right {/*right div of the parent div*/
+	margin-top:50px;
+	float: right;
+    width: 650px;
+    height: 90px;
+}
+.left {/*left div of the parent div*/
+	margin-top:0px;
+    height: 130px;
+	width: 60px;
+}
+
+h1, h2 {
+	margin-left:5px;
+	font-size: 28px;
+	line-height: 30px;
+	padding:0;
+	width:150%;
+	color:#660;
+	}
+
+h3 {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0;
+}
+
+p {
+	padding-bottom: 40px;
+}
+# h1 img {
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 10px;
+	height: 12px;
+	/* Border-radius not implemented yet */
+	}
+
+/*------------------------------
+=NAVIGATION
+------------------------------*/
+nav {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color:#36C;
+}
+
+	nav ul {
+		margin: 0 auto;
+		width: 940px;
+		list-style: none;
+	}
+
+		nav ul li {
+			float: left;
+		}
+		
+			nav ul li a {
+				display: block;
+				margin-right: 20px;
+				width: 140px;
+				font-size: 18px;
+				font-weight: bold;
+				font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+				font-style:inherit;
+				line-height: 44px;
+				text-align: center;
+				text-decoration: none;
+				color: #fff;
+				background:#36C;
+			}
+			
+				nav ul li a:hover {/*Changing font-color and bg-color when mouse pointer is over a tab */
+					color: #036;
+					background:#abaded;
+				}
+			
+			nav ul li.selected a {/*Changing font-color and bg-color after selecting a tab */
+				color: #fff;
+				background:#abaded;
+				
+			}
+			
+
+
+
+
+/*------------------------------
+=INTRODUCTION
+------------------------------*/
+
+#intro {
+	position: relative;
+	margin-top: 66px;
+	padding: 25px;
+	background: #369;
+	/* Background-size not immented yet */
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+	/* Border-radius not implemented yet */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	/*background-image: url(s11.jpg);*/
+	background-color: #05386b;
+	
+	
+}
+
+	#intro h2, #intro p {
+		position: relative;
+		z-index: 9999;
+		width: 336px;
+	}
+	
+	#intro h2 {
+		padding: 0 0 22px 0;
+		font-weight: normal;
+		color: #7ebede;
+		font-size:27px;
+		font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+		font-style:inherit;
+	}
+	
+	#intro p {
+		padding: 0;
+		color: #7ebede;
+		font-size:18px;
+	}
+	
+	#intro img {
+	position: absolute;
+	top: 1px;
+	right: 9px;
+	width: 437px;
+	height: 199px;
+	/* Border-radius not implemented yet */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	}
+
+
+/*------------------------------
+=CONTENT AREA AND SIDEBAR LAYOUT
+------------------------------*/
+
+#content {
+	display: table;
+}
+
+	#mainContent {
+		display: table-cell;
+		width: 620px;
+		padding-right: 22px;
+	}
+	
+	aside {
+		display: table-cell;
+		width: 300px;
+		background: url("images/sidebar_background.png") top left;
+	}
+
+
+
+/*------------------------------
+=FOOTER
+------------------------------*/
+footer {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background:#66F;
+}
+
+	footer div {
+		display: table;
+		margin: 0 auto;
+		padding: 20px 0;
+		width: 940px;
+		color: #777;
+	}
+
+
+
+/*Login-Form*/
+#login {
+margin: 50px auto;
+width: 300px;
+}
+form fieldset{
+	background:url(b3.jpg);
+	border-color:#09F;
+	border-width:thick;
+	border-radius: 3px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color:#fff;
+	}
+
+form fieldset input[type="text"], input[type="password"] {
+background-color: #e5e5e5;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 14px;
+height: 50px;
+outline: none;
+padding: 0px 10px;
+width: 280px;
+-webkit-appearance:none;
+}
+form fieldset input[type="submit"] {/*Login button*/
+background-color: #008dde;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 300px;
+-webkit-appearance:none;
+/*Rounded rectangle shape*/
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+padding-bottom:1px;
+}
+form fieldset a {/*Forgot password link format*/
+color:#FFF;
+font-size: 15px;
+}
+/*Change text format when mouse pointer is over Forgot password */
+form fieldset a:hover { text-decoration: underline; color:#FF0;}
+
+.btn-round {/*Login Button format*/
+background-color: #5a5656;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+color: #f4f4f4;
+display: block;
+font-size: 14px;
+height: 50px;
+line-height: 50px;
+margin: 30px 125px;
+text-align: center;
+text-transform: uppercase;
+width: 50px;
+}
+
+/*Login Animation*/
+
+
+.cssload-preloader {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10;
+}
+
+.cssload-preloader > .cssload-preloader-box {
+	position: absolute;
+	height: 29px;
+	top: 50%;
+	left: 50%;
+	margin: -15px 0 0 -146px;
+	perspective: 195px;
+		-o-perspective: 195px;
+		-ms-perspective: 195px;
+		-webkit-perspective: 195px;
+		-moz-perspective: 195px;
+}
+
+.cssload-preloader .cssload-preloader-box > div {
+	position: relative;
+	width: 29px;
+	height: 29px;
+	background: rgb(204,204,204);
+	float: left;
+	text-align: center;
+	line-height: 29px;
+	font-family: Verdana;
+	font-size: 19px;
+	color: rgb(255,255,255);
+}.cssload-preloader .cssload-preloader-box > div:nth-child(1) {
+	background: rgb(10,170,245);
+	margin-right: 15px;
+	animation: cssload-movement 1680ms ease 0ms infinite alternate;
+		-o-animation: cssload-movement 1680ms ease 0ms infinite alternate;
+		-ms-animation: cssload-movement 1680ms ease 0ms infinite alternate;
+		-webkit-animation: cssload-movement 1680ms ease 0ms infinite alternate;
+		-moz-animation: cssload-movement 1680ms ease 0ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(2) {
+	background: rgb(50,172,209);
+	margin-right: 15px;
+	animation: cssload-movement 1680ms ease 210ms infinite alternate;
+		-o-animation: cssload-movement 1680ms ease 210ms infinite alternate;
+		-ms-animation: cssload-movement 1680ms ease 210ms infinite alternate;
+		-webkit-animation: cssload-movement 1680ms ease 210ms infinite alternate;
+		-moz-animation: cssload-movement 1680ms ease 210ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(3) {
+	background: rgb(25,48,255);
+	margin-right: 15px;
+	animation: cssload-movement 1680ms ease 420ms infinite alternate;
+		-o-animation: cssload-movement 1680ms ease 420ms infinite alternate;
+		-ms-animation: cssload-movement 1680ms ease 420ms infinite alternate;
+		-webkit-animation: cssload-movement 1680ms ease 420ms infinite alternate;
+		-moz-animation: cssload-movement 1680ms ease 420ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(4) {
+	background: rgb(77,145,240);
+	margin-right: 15px;
+	animation: cssload-movement 1680ms ease 630ms infinite alternate;
+		-o-animation: cssload-movement 1680ms ease 630ms infinite alternate;
+		-ms-animation: cssload-movement 1680ms ease 630ms infinite alternate;
+		-webkit-animation: cssload-movement 1680ms ease 630ms infinite alternate;
+		-moz-animation: cssload-movement 1680ms ease 630ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(5) {
+	background: rgb(18,117,224);
+	margin-right: 15px;
+	animation: cssload-movement 1680ms ease 840ms infinite alternate;
+		-o-animation: cssload-movement 1680ms ease 840ms infinite alternate;
+		-ms-animation: cssload-movement 1680ms ease 840ms infinite alternate;
+		-webkit-animation: cssload-movement 1680ms ease 840ms infinite alternate;
+		-moz-animation: cssload-movement 1680ms ease 840ms infinite alternate;
+}
+
+
+@keyframes cssload-movement {
+	from {
+		transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgb(51,102,255);
+		background: rgb(230,255,8);
+	}
+}
+
+@-o-keyframes cssload-movement {
+	from {
+		-o-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgb(51,102,255);
+		background: rgb(230,255,8);
+	}
+}
+
+@-ms-keyframes cssload-movement {
+	from {
+		-ms-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgb(51,102,255);
+		background: rgb(230,255,8);
+	}
+}
+
+@-webkit-keyframes cssload-movement {
+	from {
+		-webkit-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgb(51,102,255);
+		background: rgb(230,255,8);
+	}
+}
+
+@-moz-keyframes cssload-movement {
+	from {
+		-moz-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgb(51,102,255);
+		background: rgb(230,255,8);
+	}
+}
+
+

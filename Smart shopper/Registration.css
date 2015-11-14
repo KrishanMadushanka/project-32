@@ -1,0 +1,424 @@
+{
+	margin: 0;
+	padding:0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+
+/*contains every thing that the user will see. any text, images and links used in the page are placed between the body tag*/
+body {
+	margin:auto;
+	padding:0;
+	width: 1000px;
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background-color:#CCF;
+}
+/*top div in the body- Includes right, left divs*/
+#parent {
+	margin-top:2px;
+    overflow: hidden;
+	margin-bottom:5px;
+}
+
+.right { /*right div of the parent div*/
+	margin-top:50px;
+	float: right;
+    width: 650px;
+    height: 90px;
+}
+.left { /*left div of the parent div*/
+	margin-top:0px;
+    height: 130px;
+	width: 60px;
+}
+
+
+
+/*NAVIGATION- tab display area*/
+
+
+nav {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color:#36C;
+}
+
+	nav ul {
+		margin: 0 auto;
+		width: 940px;
+		list-style: none;
+	}
+
+		nav ul li {
+			float: left;
+		}
+		
+			nav ul li a {
+				display: block;
+				margin-right: 20px;
+				width: 140px;
+				font-size: 18px;
+				font-weight: bold;
+				font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+				font-style:inherit;
+				line-height: 44px;
+				text-align: center;
+				text-decoration: none;
+				color: #fff;
+				background:#36C;
+			}
+			
+				nav ul li a:hover { /*changing font color and bg-color when mouse pointer is over a tab*/
+					color: #036;
+					background:#abaded;
+				}
+			
+			nav ul li.selected a { /*changing font color and bg-color after selecting a tab*/
+				color: #fff;
+				background:#abaded;
+				
+			}
+			
+			
+
+
+
+/*INTRODUCTION*/
+
+#intro {
+	position: relative;
+	margin-top: 66px;
+	padding: 25px;
+	background: #369;
+    -webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+	/* round-rectangle shape */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	background-color: #05386b;
+	
+	
+}
+
+	#intro h2, #intro p {
+		position: relative;
+		z-index: 9999;
+		width: 336px;
+	}
+	
+	#intro h2 {
+		padding: 0 0 22px 0;
+		font-weight: normal;
+		color: #7ebede;
+		font-size:27px;
+		font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+		font-style:inherit;
+	}
+	
+	#intro p {
+		padding: 0;
+		color: #7ebede;
+		font-size:18px;
+	}
+	
+	#intro img {
+	position: absolute;
+	top: 1px;
+	right: 11px;
+	width: 444px;
+	height: 199px;
+	/* round-rectangle shape */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	background-image: url(reg.jpg);
+	}
+
+
+/*CONTENT AREA AND SIDEBAR LAYOUT*/
+
+#content {
+	display: table;
+}
+
+	#mainContent {
+		display: table-cell;
+		width: 620px;
+		padding-right: 22px;
+	}
+	
+	aside {
+		display: table-cell;
+		width: 300px;
+		background-color:#8ac8e6;
+	}
+
+
+
+
+/*REG FORM*/
+form {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 6px solid #9C3;
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	font-weight:bold;
+}
+
+	form p {
+		display: table;
+		margin-bottom: 22px;
+		padding: 0 22px;
+	}
+
+		form label {
+			display: table-cell;
+			width: 140px;
+			padding-right: 20px;
+			text-align: right;
+			font-weight: bold;
+			font-size:16px;
+			vertical-align: top;
+		}
+	
+		form input[type="text"], form input[type="email"], form input[type="url"] {
+			display: table-cell;
+			width: 300px;
+			height: 20px;
+			border: 1px solid #d7d7d7;
+		}
+		
+		form textarea {
+			width: 300px;
+			height: 100px;
+			border: 1px solid #d7d7d7;
+		}
+		
+		form input[type="submit"] {
+			margin-left: 162px;
+		}
+
+
+
+/*SIDEBAR*/
+aside section {
+	margin: 22px 0 0 22px;
+	padding: 11px 22px;
+	color:#6C0
+	
+	
+	/* round-rectangle shape */
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+}
+
+	
+
+
+/*FOOTER*/
+footer {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background:#66F;
+}
+
+	footer div {
+		display: table;
+		margin: 0 auto;
+		padding: 20px 0;
+		width: 940px;
+		color: #777;
+	}
+
+/*register animation*/
+.cssload-preloader {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10;
+}
+
+.cssload-preloader > .cssload-preloader-box {
+	position: absolute;
+	height: 29px;
+	top: 50%;
+	left: 50%;
+	margin: -15px 0 0 -146px;
+	perspective: 195px;
+	-o-perspective: 195px;
+	-ms-perspective: 195px;
+	-webkit-perspective: 195px;
+	-moz-perspective: 195px;
+	width: 336px;
+}
+
+.cssload-preloader .cssload-preloader-box > div {
+	position: relative;
+	width: 26px;
+	height: 26px;
+	background: rgb(204,204,204);
+	float: left;
+	text-align: center;
+	line-height: 29px;
+	font-family: Verdana;
+	font-size: 18px;
+	color: rgb(255,255,255);
+}.cssload-preloader .cssload-preloader-box > div:nth-child(1) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 0ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 0ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 0ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 0ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 0ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(2) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 176.25ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 176.25ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 176.25ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 176.25ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 176.25ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(3) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 352.5ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 352.5ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 352.5ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 352.5ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 352.5ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(4) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 528.75ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 528.75ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 528.75ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 528.75ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 528.75ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(5) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 705ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 705ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 705ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 705ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 705ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(6) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 881.25ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 881.25ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 881.25ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 881.25ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 881.25ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(7) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 1057.5ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 1057.5ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 1057.5ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 1057.5ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 1057.5ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(8) {
+	background: rgb(51,102,255);
+	margin-right: 15px;
+	animation: cssload-movement 1410ms ease 1233.75ms infinite alternate;
+		-o-animation: cssload-movement 1410ms ease 1233.75ms infinite alternate;
+		-ms-animation: cssload-movement 1410ms ease 1233.75ms infinite alternate;
+		-webkit-animation: cssload-movement 1410ms ease 1233.75ms infinite alternate;
+		-moz-animation: cssload-movement 1410ms ease 1233.75ms infinite alternate;
+}
+
+
+@keyframes cssload-movement {
+	from {
+		transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(228,235,38,0.42);
+		background: rgb(226,250,47);
+	}
+}
+
+@-o-keyframes cssload-movement {
+	from {
+		-o-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(228,235,38,0.42);
+		background: rgb(226,250,47);
+	}
+}
+
+@-ms-keyframes cssload-movement {
+	from {
+		-ms-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(228,235,38,0.42);
+		background: rgb(226,250,47);
+	}
+}
+
+@-webkit-keyframes cssload-movement {
+	from {
+		-webkit-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 25px 39px rgba(228,235,38,0.42);
+		background: rgb(226,250,47);
+	}
+}
+
+@-moz-keyframes cssload-movement {
+	from {
+		-moz-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(228,235,38,0.42);
+		background: rgb(226,250,47);
+	}
+}
+
+
+form input[type="submit"] {
+background-color: #008dde;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 300px;
+-webkit-appearance:none;
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+}

@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--Head section>-->
+<head>
+	<title>Smart Shopper</title>
+    <!--Linking the css file to the html file-->
+	<link rel="stylesheet" href="Comment.css" type="text/css" media="screen" />
+</head>
+<!--Starts the body of the page-->
+<body>
+
+<!--Top div in the page-->
+<div id="parent">
+
+<!--Right side of the parent div-->
+    <div class="right"><font size="6" face="Agency FB" color="#996600"><b>Smart Shopper Best Deal Searching System</b></font></div>
+    <!--Left side of the parent div-->
+    <div class="left"><img src="logo.jpg" alt="logo" width="224" height="117" /></div>
+</div> 
+
+<!--Tab display area-->
+	<nav>
+    <!--Tabs as a unordered list-->
+		<ul>
+        
+			
+            <li><a href="Home.php">Home</a></li>
+			<li><a href="about us.html">About us</a></li>
+			<li><a href="Registration.html">Registration</a></li>
+			<li><a href="Login.html">Login</a></li>
+			<li class="selected"><a href="Comment.html">Comment</a></li><!--Displayed page when Comment  tab is selected-->
+		</ul>
+	</nav>
+    <!--Intro section-->
+	<section id="intro">
+		<header>
+        <!--Animated text-Comments-->
+			<h2><div class="cssload-preloader">
+	<div class="cssload-preloader-box">		<div>C</div>		<div>o</div>		<div>m</div>		<div>m</div>		<div>e</div>		<div>n</div>		<div>t</div>		</div>
+</div></h2>
+          <img src="comment.jpg" alt="Flower" width="386" height="243" />
+		</header>
+		<p><br><br>Comment on our service</p>
+	</section>
+    
+<!--Content area-->
+	<div id="content">
+    <!--Main Content of the home page-->
+		<div id="mainContent">
+			<form action="comm.php" method="post">
+				<h2 align="left"><font face="Calibri"> Post a comment here</font></h2>
+				<p>
+					<label for="email">E-mail</label>
+					<input name="email" id="email" type="email" required />
+				</p>
+				<p>
+					<label for="comment">Comment</label>
+					<textarea name="comment" id="comment" required></textarea>
+				</p>
+				<p><input type="submit" value="Post"/></p>
+			</form>
+		</div>
+        </div>
+        
+    <!--Footer of the page-->
+	<footer>
+		<div></div>
+	</footer>
+	
+</body>
+</html>

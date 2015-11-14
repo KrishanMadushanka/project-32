@@ -1,0 +1,501 @@
+{
+	margin: 0;
+	padding:0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, section, aside, nav, article {
+	display: block;
+}
+/*contains everything that the user will see.Any text, images and links used in the page are placed between the body tag.*/
+body {
+	margin:auto;
+	padding:0;
+	width: 1000px;
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background-color:#CCF;
+}
+/*top div in the body-Includes right,left divs.*/
+#parent {
+	margin-top:2px;
+    overflow: hidden;
+	margin-bottom:5px;
+}
+.right {/*right div of the parent div*/
+	margin-top:50px;
+	float: right;
+    width: 650px;
+    height: 90px;
+}
+.left {/*left div of the parent div*/
+	margin-top:0px;
+    height: 130px;
+	width: 60px;
+}
+
+
+
+
+/*NAVIGATION-Tab display area
+*/
+
+nav {
+	position: absolute;
+	left:0;
+	width: 100%;
+	background-color:#36C;
+}
+
+	nav ul {
+		margin: 0 auto;
+		width: 940px;
+		list-style: none;
+	}
+
+		nav ul li {
+			float:left;
+		}
+		
+			nav ul li a {
+				display:block;
+				margin-right:20px;
+				width: 140px;
+				font-size: 18px;
+				font-weight: bold;
+				font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+				font-style:inherit;
+				line-height: 44px;
+				text-align:center;
+				text-decoration: none;
+				color: #fff;
+				background:#36C;
+			}
+			
+				nav ul li a:hover {/*Changing font-color and bg-color when mouse pointer is over a tab */
+					color: #036;
+					background:#abaded;
+				}
+			
+			nav ul li.selected a {/*Changing font-color and bg-color after selecting a tab */
+				color: #fff;
+				background:#abaded;
+				
+			}
+			
+
+
+/*INTRODUCTION*/
+
+#intro {
+	position: relative;
+	margin-top: 66px;
+	padding: 25px;
+	background: #369;
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+	/*Round rectangle shape */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	background-color: #05386b;
+	
+	
+}
+
+	#intro h2, #intro p {
+		position: relative;
+		z-index: 9999;
+		width: 336px;
+	}
+	
+	#intro h2 {
+		padding: 0 0 22px 0;
+		font-weight: normal;
+		color: #7ebede;
+		font-size:27px;
+		font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+		font-style:inherit;
+	}
+	
+	#intro p {
+		padding: 0;
+		color: #7ebede;
+		font-size:18px;
+	}
+	
+	#intro img {
+	position: absolute;
+	top: 1px;
+	right: 6px;
+	width: 449px;
+	height: 195px;
+	/* Round-rectangle shape*/
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	}
+
+
+
+/*CONTENT AREA AND SIDEBAR LAYOUT*/
+
+#content {
+	
+	display: table;
+}
+
+
+	#mainContent {
+		display: table-cell;
+		width: 620px;
+		padding-right: 22px;
+		font-size:20px;
+	}
+
+	
+	aside {
+		display: table-cell;
+		width: 300px;
+		background-color:#8ac8e6;
+	}
+/*table*/
+table.ItemList {
+    width: 500px;/* Optional 
+    /* border-collapse: collapse; */
+    border-spacing: 0;
+    border: 2px solid black;
+    height:100%;
+	font-size:16px;
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	background:#369;
+	color:#FFF;
+}
+
+table.ItemList tbody,
+table.ItemList thead { display: block; }
+
+thead tr th { 
+	width: 500px;
+    height: 30px;
+    line-height: 10px;
+    text-align: center;
+}
+
+table.ItemList tbody {
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+tbody { border-top: 2px solid black; }
+
+tbody td, thead th {
+    width: 300px; /* Optional */
+    /*border-right: 1px solid black;
+    /* white-space: nowrap; */
+	line-height:40px;
+	text-align:justify;
+}
+
+tbody td:last-child, thead th:last-child {
+    border-right: none;
+	text-align:center;
+}
+#items ul {
+  font-size: 15px;
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+  width: 450px;
+}
+#items a {
+  text-decoration: none;
+  display: block;
+  padding: 2px 2px 2px 2px;
+  background-color: #003333;
+  color: #fff;
+  border: 2px solid #ddd;
+
+
+
+}
+#items a:active {
+  padding: 1px 1px 1px 1px;
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #333;
+
+}
+
+#items li li a {
+  text-decoration: none;
+  padding: 2px 2px 2px 2px;
+  background-color: #006666;
+  color: #fff;
+  line-height:30px;
+
+  
+}
+#items li li a:active {
+  padding: 1px 2px 2px 2px;
+  background-color: #003366;
+  color: #000;
+
+}
+input[type="submit"]{
+	background-color: #008dde;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 300px;
+-webkit-appearance:none;
+/*Rounded rectangle shape*/
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+padding-bottom:1px;
+
+
+}
+
+
+/*------------------------------
+=SIDEBAR
+------------------------------*/
+aside section {
+	margin: 22px 0 0 22px;
+	padding: 11px 22px;
+	background: url("images/sidebar_section_background.png") repeat-x;
+	
+	/* Border-radius not implemented yet */
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+}
+
+
+/*drop down*/
+select {
+   	position: relative; 
+    width: 70px;
+    padding: 10px;
+    margin: 0 auto;
+
+    /* Styles */
+    background: #fff;
+    color: #000;
+    outline:none;
+    cursor:auto;
+
+    /* Font settings */
+    font-weight: bold;
+}
+
+
+/*Buttons*/
+.myButton {
+	-moz-box-shadow: 3px 5px 14px 0px #21218a;
+	-webkit-box-shadow: 3px 5px 14px 0px #21218a;
+	box-shadow: 3px 5px 14px 0px #21218a;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #203bc4), color-stop(1, #39cbf0));
+	background:-moz-linear-gradient(top, #203bc4 5%, #39cbf0 100%);
+	background:-webkit-linear-gradient(top, #203bc4 5%, #39cbf0 100%);
+	background:-o-linear-gradient(top, #203bc4 5%, #39cbf0 100%);
+	background:-ms-linear-gradient(top, #203bc4 5%, #39cbf0 100%);
+	background:linear-gradient(to bottom, #203bc4 5%, #39cbf0 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#203bc4', endColorstr='#39cbf0',GradientType=0);
+	background-color:#203bc4;
+	-moz-border-radius:22px;
+	-webkit-border-radius:22px;
+	border-radius:22px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:20px;
+	padding:9px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d0ac9;
+}
+.myButton:hover {/*Change format of the button when mouse pointer is over it*/
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #39cbf0), color-stop(1, #203bc4));
+	background:-moz-linear-gradient(top, #39cbf0 5%, #203bc4 100%);
+	background:-webkit-linear-gradient(top, #39cbf0 5%, #203bc4 100%);
+	background:-o-linear-gradient(top, #39cbf0 5%, #203bc4 100%);
+	background:-ms-linear-gradient(top, #39cbf0 5%, #203bc4 100%);
+	background:linear-gradient(to bottom, #39cbf0 5%, #203bc4 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#39cbf0', endColorstr='#203bc4',GradientType=0);
+	background-color:#39cbf0;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Home Animation*/
+
+
+.cssload-preloader {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10;
+}
+
+.cssload-preloader > .cssload-preloader-box {
+	position: absolute;
+	height: 29px;
+	top: 50%;
+	left: 50%;
+	margin: -15px 0 0 -146px;
+	perspective: 195px;
+		-o-perspective: 195px;
+		-ms-perspective: 195px;
+		-webkit-perspective: 195px;
+		-moz-perspective: 195px;
+}
+
+.cssload-preloader .cssload-preloader-box > div {
+	position: relative;
+	width: 29px;
+	height: 29px;
+	background: rgb(204,204,204);
+	float: left;
+	text-align: center;
+	line-height: 29px;
+	font-family: Verdana;
+	font-size: 19px;
+	color: rgb(255,255,255);
+}.cssload-preloader .cssload-preloader-box > div:nth-child(1) {
+	background: rgba(191,230,242,0.51);
+	margin-right: 15px;
+	animation: cssload-movement 1950ms ease 0ms infinite alternate;
+		-o-animation: cssload-movement 1950ms ease 0ms infinite alternate;
+		-ms-animation: cssload-movement 1950ms ease 0ms infinite alternate;
+		-webkit-animation: cssload-movement 1950ms ease 0ms infinite alternate;
+		-moz-animation: cssload-movement 1950ms ease 0ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(2) {
+	background: rgba(250,247,250,0.57);
+	margin-right: 15px;
+	animation: cssload-movement 1950ms ease 243.75ms infinite alternate;
+		-o-animation: cssload-movement 1950ms ease 243.75ms infinite alternate;
+		-ms-animation: cssload-movement 1950ms ease 243.75ms infinite alternate;
+		-webkit-animation: cssload-movement 1950ms ease 243.75ms infinite alternate;
+		-moz-animation: cssload-movement 1950ms ease 243.75ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(3) {
+	background: rgba(191,230,242,0.37);
+	margin-right: 15px;
+	animation: cssload-movement 1950ms ease 487.5ms infinite alternate;
+		-o-animation: cssload-movement 1950ms ease 487.5ms infinite alternate;
+		-ms-animation: cssload-movement 1950ms ease 487.5ms infinite alternate;
+		-webkit-animation: cssload-movement 1950ms ease 487.5ms infinite alternate;
+		-moz-animation: cssload-movement 1950ms ease 487.5ms infinite alternate;
+}
+.cssload-preloader .cssload-preloader-box > div:nth-child(4) {
+	background: rgba(51,102,255,0.51);
+	margin-right: 15px;
+	animation: cssload-movement 1950ms ease 731.25ms infinite alternate;
+		-o-animation: cssload-movement 1950ms ease 731.25ms infinite alternate;
+		-ms-animation: cssload-movement 1950ms ease 731.25ms infinite alternate;
+		-webkit-animation: cssload-movement 1950ms ease 731.25ms infinite alternate;
+		-moz-animation: cssload-movement 1950ms ease 731.25ms infinite alternate;
+}
+
+
+@keyframes cssload-movement {
+	from {
+		transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(191,230,242,0.5);
+		background: rgb(226,232,55);
+	}
+}
+
+@-o-keyframes cssload-movement {
+	from {
+		-o-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(191,230,242,0.5);
+		background: rgb(226,232,55);
+	}
+}
+
+@-ms-keyframes cssload-movement {
+	from {
+		-ms-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(191,230,242,0.5);
+		background: rgb(226,232,55);
+	}
+}
+
+@-webkit-keyframes cssload-movement {
+	from {
+		-webkit-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(191,230,242,0.5);
+		background: rgb(226,232,55);
+	}
+}
+
+@-moz-keyframes cssload-movement {
+	from {
+		-moz-transform: scale(1.0) translateY(0px) rotateX(0deg);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+	to {
+		-moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
+		box-shadow: 0 24px 39px rgba(191,230,242,0.5);
+		background: rgb(226,232,55);
+	}
+}
+
+/*------------------------------
+=FOOTER
+------------------------------*/
+footer {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background:#66F;
+}
+
+	footer div {
+		display: table;
+		margin: 0 auto;
+		padding: 20px 0;
+		width: 940px;
+		color: #777;
+	}
+	
+	#simplemodal-container a.modalCloseImg {
+	background:url(/img/x.png) no-repeat; /* adjust url as required */
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}

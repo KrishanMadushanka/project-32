@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<!--Head section>-->
+<head>
+	<title>Smart Shopper</title>
+    <!--Linking the css file to the html file-->
+	<link rel="stylesheet" href="about us.css" type="text/css" media="screen" />
+</head>
+<!--Starts the body of the page-->
+<body>
+
+<!--Top div in the page-->
+<div id="parent">
+
+	<!--Right side of the parent div-->
+    <div class="right"><font size="6" face="Agency FB" color="#996600"><b>Smart Shopper Best Deal Searching System</b></font></div>
+    <!--Left side of the parent div-->
+    <div class="left"><img src="logo.jpg" alt="logo" width="224" height="117" /></div>
+</div> 
+
+<!--Tab display area-->
+	<nav>
+    <!--Tabs as a unordered list-->
+		<ul>
+       
+			
+            <li><a href="Home.html">Home</a></li>
+			<li><a href="about us.html">About Us</a></li> <!--Displayed page when home  tab is selected-->
+			<li><a href="Registration.html">Registration</a></li>
+			<li><a href="Login.html">Login</a></li>
+            <li><a href="Comment.html">Comment</a></li>
+			
+	  </ul>
+	</nav>
+    <!--Intro section-->
+	<section id="intro" name="intro">
+		<header>
+        
+        <!--Animated text-About Us-->
+			<h2><div class="cssload-preloader">
+	<div class="cssload-preloader-box">		<div>A</div>		<div>b</div>		<div>o</div>		<div>u</div>		<div>t</div>				<div>U</div>		<div>s</div></div>
+</div></h2>
+            <img src="about1.jpg" alt="about" width="386" height="243" />
+		</header>
+		<p><br><br>Know about us</p>
+	</section>
+	<!--Content area-->
+	<div id="content">
+    <!--Main Content of the home page-->
+		<div id="mainContent">
+			<section>
+					<header>
+						<h2 align="left"><font face="Segoe Script"> Your Bill</font></h2>
+					</header>
+					<div><br>
+<?PHP
+
+$hostname="localhost";//assigning server name to variable
+	$username="root";//assigning username to database to variable
+	$password="";//assigning password to database to variable
+	$db="smart_shopper";//assigning database name to variable
+
+	$conn=mysqli_connect($hostname,$username,$password,$db);//connecting to database
+	if(!$conn){
+		die("Error");//if unable to connect to database die, print "Error"
+	}
+
+
+  $item = $_POST['ITEM'];
+  $qty=$_POST['QTY'];
+  $qty1= array();
+  foreach ($qty as $row) {
+    if ($row != 0)
+       $qty1[] = $row;
+}
+$qty = $qty1;
+
+  
+  if(empty($item))
+  {
+    echo("You didn't select items");
+  }
+  else
+  {
+    /*$sql2="CREATE TABLE `smart_shopper`.`bill`(ItemID varchar(60) PRIMARY KEY,Cost1 int(60),Cost2 int(60),Cost3 int(60),Cost4 int(60),Cost5 int(60))";
+  	$sql4="CREATE TABLE `deal` (ItemID VARCHAR(60) PRIMARY KEY,price int(60))";
+    $result2=mysqli_query($conn,$sql2);
+    $result4=mysqli_query($conn,$sql4);
+
+    if(!$result2||$result4){
+    echo "No tables created";//
+    }else{echo "Tables created";
+    }*/
+
+    $N = count($item);
+    echo("You selected $N item(s): ");
+    for($i=0; $i < $N; $i++)
+    {
+      echo htmlspecialchars($item[$i] ). " ";
+      //echo htmlspecialchars($qty[$i])." ";
+      $sql="INSERT INTO `smart_shopper`.`deal`(`ItemID`,`price1`,`price2`,`price3`,`price4`,`price5`,`quantity`) VALUES ('{$item[$i]}',(select price1 from items where ItemID='".$item[$i]."'),(select price2 from items where ItemID='".$item[$i]."'),(select price3 from items where ItemID='".$item[$i]."'),(select price4 from items where ItemID='".$item[$i]."'),(select price5 from items where ItemID='".$item[$i]."'),'{$qty[$i]}')";
+    
+    
+     // $sql = 'INSERT INTO deal (`id`, `name`, `datetime`) VALUES ("'.$var1.'", "'.$var2.'", now());';
+      $sql3="INSERT INTO `smart_shopper`.`bill`(`ItemID`,`Cost1`,`Cost2`,`Cost3`,`Cost4`,`Cost5`) VALUES ((select ItemID from deal where ItemID='".$item[$i]."'),(select quantity *  price1 from deal where ItemID='".$item[$i]."'),(select quantity *  price2 from deal where ItemID='".$item[$i]."'),(select quantity *  `price3` from deal where ItemID='".$item[$i]."'),(select quantity *  price4 from deal where ItemID='".$item[$i]."'),(select quantity *  price5 from deal where ItemID='".$item[$i]."'))";
+
+    $result1=mysqli_query($conn,$sql);
+    $result3=mysqli_query($conn,$sql3);
+
+    if(!$result1||!$result3){
+    echo "Failed to insert";//
+   // }else{echo "Done";
+    }
+    }
+    
+    
+//.............................
+
+echo "<br>Your Bill";
+$sql6 = "SELECT * FROM bill";
+
+$result6 = mysqli_query($conn,$sql6)or die(mysqli_error());
+
+echo "<table>";
+echo "<tr><th>ITEMID</th><th>Shop1</th><th>Shop2</th><th>Shop3</th><th>Shop4</th><th>Shop5</th></tr>";
+
+while($row = mysqli_fetch_array($result6)) {
+    $itemid = $row['ItemID'];
+    $shop1 = $row['Cost1'];
+    $shop2 = $row['Cost2'];
+    $shop3 = $row['Cost3'];
+    $shop4 = $row['Cost4'];
+    $shop5 = $row['Cost5'];
+    
+    echo "<tr><td style='width: 200px;'>".$itemid."</td><td>".$shop1."</td><td>".$shop2."</td><td>".$shop3."</td><td>".$shop4."</td><td>".$shop5."</td></tr>";
+} 
+//header('location:bill.html');
+echo "</table>";
+
+}
+    //header('location:bill.html');
+
+   
+   $query1="TRUNCATE TABLE bill";
+    $r2 = mysqli_query($conn,$query1);
+
+    $query2="TRUNCATE TABLE deal";
+    $r3 = mysqli_query($conn,$query2);
+
+
+
+
+
+?>
+					  
+					</div>
+			</section>
+		</div>
+        <!--Side bar for displayed for contact details-->
+		<aside>
+			<section>
+				<header>
+					<h3>Contact Us</h3>
+				</header>
+				<p><br>
+E-mail: smartshopper@gmail.com
+<br>
+Mobile: 071-7662188</p>
+			</section>
+		</aside>
+	</div>
+<!--Footer of the page-->
+	<footer>
+		<div></div>
+	</footer>
+	
+</body>
+</html>
