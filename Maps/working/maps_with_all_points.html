@@ -10,9 +10,9 @@
 <script>
 function success(position) {
 
-var kohuwala = {lat: 6.8664813, lng: 79.8846455};
-var townhall = {lat: 6.9152446, lng: 79.8623631};
-var mirihana = {lat: 6.874539, lng: 79.9020139};
+  var kohuwala = {lat: 6.8664813, lng: 79.8846455};
+  var townhall = {lat: 6.9152446, lng: 79.8623631};
+  var mirihana = {lat: 6.874539, lng: 79.9020139};
 
   var mapcanvas = document.createElement('div');
   mapcanvas.id = 'mapcontainer';
@@ -35,9 +35,9 @@ var mirihana = {lat: 6.874539, lng: 79.9020139};
   var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
 
   var markerMy = new google.maps.Marker({
-      position: coords,
-      map: map,
-      title:"You are here!"
+    position: coords,
+    map: map,
+    title:"You are here!"
   });
   var markerKohuwala = new google.maps.Marker({
     position: kohuwala,
@@ -54,13 +54,14 @@ var mirihana = {lat: 6.874539, lng: 79.9020139};
     map: map,
     title: 'Mirihana'
   });
+  
 }
-
-if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(success);
+/*if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(success);
 } else {
   error('Geo Location is not supported');
-}
+}*/
 
 </script>
 <script async defer
