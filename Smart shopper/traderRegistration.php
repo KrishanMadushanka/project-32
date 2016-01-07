@@ -16,26 +16,30 @@
 	$F_Name=$_POST['firstname'];
 	$L_Name=$_POST['lastname'];
 	$Password=$_POST['password'];
+	$Latitude=$_POST['latitude'];
+	$Longitude=$_POST['longitude'];
 	
 
 	$Password=hash("sha1",$Password);//hashcoding the password
 	
 	$query="INSERT INTO `smart_shopper`.`user` (`E_mail`, `Type`,";
-	$query.=" `Contact_No`, `Address`, `F_Name`, `L_Name`) VALUES ";
-	$query.="('{$E_mail}', 'trader', '{$Contact_No}', '{$Address}', '{$F_Name}', '{$L_Name}')";
+	$query.=" `Contact_No`, `Address`, `F_Name`, `L_Name`,`Latitude`,`Longitude`) VALUES ";
+	$query.="('{$E_mail}', 'trader', '{$Contact_No}', '{$Address}', '{$F_Name}', '{$L_Name}','{$Latitude}','{$Longitude}')";
 	//inserting data in to table user
  	
  	$query2="INSERT INTO `smart_shopper`.`login` (`E_mail`, `Password`) VALUES ('{$E_mail}', '{$Password}')";
  	
+ 	//$query3="INSERT INTO 'smart_shopper'.'user'('Latitude','Longitude') VALUES ('{$Latitude}','{$Longitude}')";
  	//inserting data in to table login
 
 	$result2=mysqli_query($conn,$query2);//return true is query is exected successfully	
 	$result=mysqli_query($conn,$query);//return true is query is exected successfully
-
+	//$result3=mysqli_query($conn,$query3);
  	if(!$result || !$result2){
  		echo "Failed to insert";//if $result2 or $result returns false print failed to insert
  	}else{
  		echo "string";
  		header('location:Login.html');//else direct to related page
  	}
+ 	echo $Latitude;
  ?>

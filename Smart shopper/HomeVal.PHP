@@ -1,4 +1,4 @@
-<?PHP
+<?php
 	$hostname="localhost";//assigning server name to variable
 	$username="root";//assigning username to database to variable
 	$password="";//assigning password to database to variable

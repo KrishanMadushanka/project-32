@@ -147,14 +147,16 @@ nav {
 
 	#mainContent {
 		display: table-cell;
-		width: 620px;
+		width: 500px;
 		padding-right: 22px;
+		float:left;
 	}
 	
 	aside {
 		display: table-cell;
-		width: 300px;
+		width: 450px;
 		background-color:#8ac8e6;
+		float:right;
 	}
 
 
